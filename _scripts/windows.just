@@ -51,7 +51,7 @@ install-deps:
     # ――――――――――――――――――――――――――――――――――――――― FFmpeg ――――――――――――――――――――――――――――――――――――――――
     if (-not (Test-Path -Path "{{FFmpeg}}")) {
         echo "Downloading {{FFmpeg}}"
-        Invoke-WebRequest -Uri "https://github.com/icyllite/gyroflow/releases/download/ffmpeg-build/msvc-ffmpeg-9.1.7z" -OutFile "{{FFmpeg}}.7z" -MaximumRedirection 5 -UserAgent "wget/1.21"
+        Invoke-WebRequest -Uri "https://github.com/icyllite/gyroflow/releases/download/ffmpeg-build/msvc-ffmpeg-9.0.7z" -OutFile "{{FFmpeg}}.7z" -MaximumRedirection 5 -UserAgent "wget/1.21"
         7z x -y {{FFmpeg}}.7z
         del {{FFmpeg}}.7z
     }
